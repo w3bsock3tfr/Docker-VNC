@@ -36,6 +36,6 @@ VOLUME /storage
 ENV RAM_SIZE "12G"
 ENV CPU_CORES "3"
 ENV DISK_SIZE "256G"
-ENV VERSION "tiny10"
+ENV VERSION "tiny11"
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
