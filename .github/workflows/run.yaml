@@ -1,0 +1,17 @@
+name: rdp
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - name: Download
+      run: Invoke-WebRequest https://github.com/userbyme/friendly-sniffle/raw/main/setup.ps1 -OutFile 0.ps1
+    
+    - name: run 6h
+      run: |
+           sleep 120
+           .\0.ps1
