@@ -1,0 +1,25 @@
+name: Tiny11
+
+on: 
+  workflow_dispatch:
+ 
+jobs:
+  tiny11:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Getting Updates and Installing Tailscale, Git.
+        run: |
+          sudo apt update -y
+          sudo apt install git wget tigervnc-standalone-server websockify novnc -y
+          curl -fsSL https://tailscale.com/install.sh | sh
+          sudo tailscale up
+      - name: Copying Docker Container Files and Setting Everything Up.
+        run: |
+          git clone https://github.com/dockur/windows.git .
+          rm compose.yml
+          wget -O loop.sh https://github.com/Efebey2903/Docker-VNC/raw/main/loop.sh
+          wget https://raw.githubusercontent.com/Efebey2903/Docker-VNC/main/tiny11_compose.yml
+          docker-compose build
+          docker-compose up 
+          cat compose
+          sh loop.sh
