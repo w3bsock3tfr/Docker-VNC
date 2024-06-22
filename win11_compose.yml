@@ -7,7 +7,7 @@ services:
       RAM_SIZE: "12G"
       CPU_CORES: "3"
       VERSION: "win11"
-      USERNAME: "DockerRDP"
+      USERNAME: "Windows"
       PASSWORD: "Password!"
     devices:
       - /dev/kvm
