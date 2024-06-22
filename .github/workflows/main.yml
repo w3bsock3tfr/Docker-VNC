@@ -16,9 +16,9 @@ jobs:
       - name: Copying Docker Container Files and Setting Everything Up.
         run: |
           git clone https://github.com/dockur/windows.git .
-          rm Dockerfile
+          rm compose.yml
           wget -O loop.sh https://github.com/Efebey2903/Docker-VNC/raw/main/loop.sh
-          wget https://github.com/Efebey2903/Docker-VNC/raw/main/Dockerfile
-          docker build -t dockerd .
-          nohup docker run -i --name windows -p 8006:8006 --device=/dev/kvm -v  /mnt:/storage --cap-add NET_ADMIN --stop-timeout 99999990 dockerd &> /dev/null &
+          wget https://raw.githubusercontent.com/Efebey2903/Docker-VNC/main/compose.yml
+          docker-compose build
+          nohup docker-compose up &> /dev/null &
           sh loop.sh
