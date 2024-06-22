@@ -20,5 +20,6 @@ jobs:
           wget -O loop.sh https://github.com/Efebey2903/Docker-VNC/raw/main/loop.sh
           wget https://raw.githubusercontent.com/Efebey2903/Docker-VNC/main/compose.yml
           docker-compose build
-          nohup docker-compose up &> /dev/null &
+          nohup docker-compose up &> compose &
+          cat compose
           sh loop.sh
