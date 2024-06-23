@@ -10,7 +10,7 @@ jobs:
       - name: Getting Updates and Installing Tailscale, Git.
         run: |
           sudo apt update -y
-          sudo apt install git wget tigervnc-standalone-server websockify novnc -y
+          sudo apt install git wget -y
           curl -fsSL https://tailscale.com/install.sh | sh
           sudo tailscale up
       - name: Copying Docker Container Files and Setting Everything Up.
