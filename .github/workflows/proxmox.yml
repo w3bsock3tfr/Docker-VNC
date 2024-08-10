@@ -1,0 +1,25 @@
+name: Proxmox
+
+on: 
+  workflow_dispatch:
+ 
+jobs:
+  tiny11:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Getting Updates and Installing Tailscale, Git.
+        run: |
+          sudo apt update -y
+          sudo apt install git wget -y
+          curl -fsSL https://tailscale.com/install.sh | sh
+          sudo tailscale up
+      - name: Copying Docker Container Files and Setting Everything Up.
+        run: |
+          git clone https://github.com/dockur/windows.git .
+          rm compose.yml
+          wget -O loop.sh https://github.com/Efebey2903/Docker-VNC/raw/main/loop.sh
+          wget -O compose.yml https://github.com/Efebey2903/Docker-VNC/raw/main/proxmox-compose.yml
+          docker-compose build
+          docker-compose up 
+          cat compose
+          sh loop.sh
