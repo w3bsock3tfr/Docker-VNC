@@ -19,6 +19,7 @@ jobs:
           rm compose.yml
           wget -O loop.sh https://github.com/Efebey2903/Docker-VNC/raw/main/loop.sh
           wget -O docker-compose.yml https://github.com/Efebey2903/Docker-VNC/raw/main/winserv2025_compose.yml
+          sleep 1
           docker-compose build
           sleep 2
           docker-compose up 
