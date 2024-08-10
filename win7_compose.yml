@@ -5,8 +5,8 @@ services:
     environment:
       DISK_SIZE: "128G"
       RAM_SIZE: "12G"
-      CPU_CORES: "3"
-      VERSION: "https://archive.org/download/tiny-11-NTDEV/tiny11%20b2%28no%20sysreq%29.iso"
+      CPU_CORES: "4"
+      VERSION: "win7"
       USERNAME: "Windows"
       PASSWORD: "Password!"
     devices:
