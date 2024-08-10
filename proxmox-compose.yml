@@ -1,5 +1,5 @@
 services:
-  windows:
+  ubuntu:
     image: dockurr/windows
     container_name: windows
     environment:
