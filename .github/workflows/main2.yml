@@ -5,12 +5,12 @@ on:
  
 jobs:
   win10:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Getting Updates and Installing Tailscale, Git.
         run: |
           sudo apt update -y
-          sudo apt install git wget -y
+          sudo apt install git wget docker-compose -y
           curl -fsSL https://tailscale.com/install.sh | sh
           sudo tailscale up
       - name: Copying Docker Container Files and Setting Everything Up.
