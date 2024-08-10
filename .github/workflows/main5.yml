@@ -1,10 +1,10 @@
-name: Proxmox
+name: Windows 10X (Moon Valley)
 
 on: 
   workflow_dispatch:
  
 jobs:
-  tiny11:
+  win10x:
     runs-on: ubuntu-22.04
     steps:
       - name: Getting Updates and Installing Tailscale, Git.
