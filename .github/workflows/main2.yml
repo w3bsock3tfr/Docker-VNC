@@ -18,8 +18,10 @@ jobs:
           git clone https://github.com/dockur/windows.git .
           rm compose.yml
           wget -O loop.sh https://github.com/Efebey2903/Docker-VNC/raw/main/loop.sh
-          wget -O compose.yml https://raw.githubusercontent.com/Efebey2903/Docker-VNC/main/win10_compose.yml
+          wget -O docker-compose.yml https://raw.githubusercontent.com/Efebey2903/Docker-VNC/main/win10_compose.yml
+          sleep 1
           docker-compose build
+          sleep 2
           docker-compose up 
           cat compose
           sh loop.sh
