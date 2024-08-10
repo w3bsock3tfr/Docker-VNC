@@ -5,7 +5,7 @@ services:
     environment:
       DISK_SIZE: "128G"
       RAM_SIZE: "12G"
-      CPU_CORES: "3"
+      CPU_CORES: "4"
       VERSION: "win10"
       USERNAME: "Windows"
       PASSWORD: "Password!"
