@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
  
 jobs:
-  tiny11:
+  winserver2025:
     runs-on: ubuntu-22.04
     steps:
       - name: Getting Updates and Installing Tailscale, Git.
