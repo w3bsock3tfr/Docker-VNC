@@ -4,9 +4,14 @@ on:
   workflow_dispatch:
  
 jobs:
-  win81:
+  win7:
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Docker
+        uses: crazy-max/ghaction-setup-docker@v3.3.0
+
       - name: Getting Updates and Installing Tailscale, Git.
         run: |
           sudo apt update -y
