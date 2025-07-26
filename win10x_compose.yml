@@ -6,7 +6,7 @@ services:
       DISK_SIZE: "128G"
       RAM_SIZE: "12G"
       CPU_CORES: "4"
-      VERSION: "https://archive.org/download/moonvalleybeta2/Windows%20Moon%20Valley%20Beta%202.iso"
+      VERSION: "https://archive.org/download/moon-valley-rtm/Windows-Moon-Valley_RTM.iso"
       USERNAME: "Windows"
       PASSWORD: "Password!"
     devices:
